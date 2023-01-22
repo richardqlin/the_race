@@ -15,10 +15,10 @@ white=(255,255,255)
 red=(255,0,0)
 green=(0,255,0)
 blue=(0,0,255)
-pygame.mixer.music.load('foo.mp3')
+#pygame.mixer.music.load('foo.mp3')
 
-win_sound = pygame.mixer.Sound("ting.wav")
-two = pygame.mixer.Sound("win.wav")
+#win_sound = pygame.mixer.Sound("ting.wav")
+#two = pygame.mixer.Sound("win.wav")
 finishers=0
 lap=10
 class Ball:
@@ -61,16 +61,16 @@ while game:
             print('red')
             b.x=10
             b.color=(255,0,0)
-            pygame.mixer.Sound.play(win_sound)
+            #pygame.mixer.Sound.play(win_sound)
         elif finishers ==2 and b.lap_count==lap :
             b.color=(0,255,0)    
             b.x=10  
             print('green')
-            pygame.mixer.Sound.play(two)
+            #pygame.mixer.Sound.play(two)
         elif finishers ==3 and b.lap_count==lap:
             b.color=(0,0,255)
             print('blue')
-            pygame.mixer.music.play()
+            #pygame.mixer.music.play()
             b.x=10
             finishers +=1
     if finishers >= 11:
@@ -86,3 +86,4 @@ while game:
 ##
 
 print('game over')
+
